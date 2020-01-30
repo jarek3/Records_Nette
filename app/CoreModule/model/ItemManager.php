@@ -20,8 +20,9 @@ class ItemManager extends DatabaseManager
 	const
 		TABLE_NAME = 'item',
 		COLUMN_ID = 'item_id';             
-                 
-        public function datumDb($value, $format='Y-m-d')
+                        
+	// Metoda pro zpracování datumu
+	public function datumDb($value, $format='Y-m-d')
         {   
         //pokud bude zadán měsíc česky textem 
         $mesice = ['ledna', 'února', 'března', 'dubna', 'května', 'června', 'července', 'srpna', 'září', 'října', 'listopadu', 'prosince'];
