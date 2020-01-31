@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.2
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Počítač: 127.0.0.1
--- Vytvořeno: Stř 29. led 2020, 07:45
--- Verze serveru: 10.4.10-MariaDB
--- Verze PHP: 7.3.12
+-- Vytvořeno: Pát 31. led 2020, 07:46
+-- Verze serveru: 10.4.11-MariaDB
+-- Verze PHP: 7.4.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
