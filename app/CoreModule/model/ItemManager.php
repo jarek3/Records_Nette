@@ -58,7 +58,7 @@ class ItemManager extends DatabaseManager
 	}
 
 	/**
-	 * Vrátí článek z databáze podle jeho ID.
+	 * Vrátí položku z databáze podle její ID.
 	 * @param string $item_id ID položky
 	 * @return false|ActiveRow první položka, která odpovídá ID nebo false pokud položka s daným id neexistuje
 	 */
@@ -85,7 +85,7 @@ class ItemManager extends DatabaseManager
 	}
 
 	/**
-	 * Odstraní článek s daným ID.
+	 * Odstraní položku s daným ID.
 	 * @param string $item_id ID položky
 	 */
 	public function removeItem($item_id)
