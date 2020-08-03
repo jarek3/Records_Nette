@@ -36,7 +36,7 @@ class ItemPresenter extends BasePresenter
     }
 
     /**
-    * Načte a předá položku do šablony podle jeho URL.
+    * Načte a předá položku do šablony podle její URL.
     * @param string|null $url URL položky
     * @throws BadRequestException Jestliže položka s danou URL nebyla nalezena.
     */
