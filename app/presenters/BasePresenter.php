@@ -38,14 +38,12 @@ abstract class BasePresenter extends Presenter
         }
 
         
-        //* Filtr pro formátování datumu v šabloně */
-        
         public function beforeRender()
         {   
-        $this->template->addFilter('dateCzech', function ($datum_narozeni)
+        $this->template->addFilter('dateCzech', function ($birthdate)
             {
             $date = new \DateTime();
-            return $datum_narozeni->format('d.m.Y');
+            return $birthdate->format('d.m.Y');
             }
                                   );
         }
