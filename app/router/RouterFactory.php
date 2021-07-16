@@ -43,7 +43,7 @@ class RouterFactory
 				Route::FILTER_STRICT => true,
 				Route::FILTER_TABLE => [
 					// řetězec v URL => akce presenteru
-					'seznam-clanku' => 'list',
+					'seznam-polozek' => 'list',
 					'editor' => 'editor',
 					'odstranit' => 'remove'
 				]
