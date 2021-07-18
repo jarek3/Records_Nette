@@ -45,7 +45,7 @@ security:
 services:
 	router: App\RouterFactory::createRouter # Nastavení služby routeru aplikace.
 	authenticator: App\Model\UserManager    # Nastavení služby pro přihlašování do aplikace.
-	security.authorizator:                  # Nastavení služby pro opravní uživatelů aplikace (ACL).
+	security.authorizator:                  # Nastavení služby pro oprávnění uživatelů aplikace (ACL).
 	    setup:
 	        # Zdroje aplikace.
 	        - addResource(Error)
