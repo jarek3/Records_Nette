@@ -37,16 +37,21 @@ class UserManager extends DatabaseManager implements IAuthenticator
         $user = $this->database->table(self::TABLE_NAME)->where(self::COLUMN_NAME, $username)->fetch();
 
         // Ověření uživatele.
-        if (!$user) { // Vyhodí výjimku, pokud uživatel neexituje.
+        if (!$user)     // Vyhodí výjimku, pokud uživatel neexituje.
+        {
             throw new AuthenticationException('Zadané uživatelské jméno neexistuje.', self::IDENTITY_NOT_FOUND);
-            
-        } else if (!Passwords::verify($password, $user[self::COLUMN_PASSWORD_HASH])) { // Ověří zadané heslo.
+        }
+        else if (!Passwords::verify($password, $user[self::COLUMN_PASSWORD_HASH]))
+            // Ověří zadané heslo.
             // Vyhodí výjimku, pokud je heslo špatně.
+        {
             throw new AuthenticationException('Zadané heslo není správně.', self::INVALID_CREDENTIAL);
-            
-        } else if (Passwords::needsRehash($user[self::COLUMN_PASSWORD_HASH])) { // Zjistí zda heslo potřebuje rehashovat.
+        }
+        else if (Passwords::needsRehash($user[self::COLUMN_PASSWORD_HASH]))
+            // Zjistí zda heslo potřebuje rehashovat.
             // Rehashuje heslo (bezpečnostní opatření).
-            $user->update([self::COLUMN_PASSWORD_HASH => Passwords::hash($password)]);
+        {
+             $user->update([self::COLUMN_PASSWORD_HASH => Passwords::hash($password)]);
         }
 
         // Příprava atributů z databáze pro identitu úspěšně přihlášeného uživatele.
